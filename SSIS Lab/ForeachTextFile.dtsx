@@ -1,20 +1,20 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/17/2016 12:48:50 PM"
-  DTS:CreationName="Microsoft.Package"
+  DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="MYDEVBOX"
   DTS:CreatorName="MYDEVBOX\admin"
   DTS:DTSID="{135B802F-67EA-42C6-85FB-B2FFAB5D918E}"
-  DTS:ExecutableType="Microsoft.Package"
+  DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="13.0.1601.5"
   DTS:LocaleID="1033"
   DTS:ObjectName="ForeachTextFile"
   DTS:PackageType="5"
   DTS:VersionBuild="21"
-  DTS:VersionGUID="{577115A4-3513-4766-B39F-BBC97FE4A9C1}">
+  DTS:VersionGUID="{5653818E-64B8-4DC9-A199-DD6FCB52C40C}">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">8</DTS:Property>
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ssislab]"
@@ -128,7 +128,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:CreationName="DTS.ForEachFileEnumerator.3"
         DTS:DTSID="{031BBC63-4642-4387-982E-60734C6DD67C}"
         DTS:ObjectName="{031BBC63-4642-4387-982E-60734C6DD67C}">
         <DTS:PropertyExpression
@@ -150,10 +150,10 @@
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\Archive Employee Files"
-          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
           DTS:Description="File System Task"
           DTS:DTSID="{4A92BB10-B32B-494B-BEBA-A29B53400543}"
-          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
           DTS:LocaleID="-1"
           DTS:ObjectName="Archive Employee Files"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -171,10 +171,10 @@
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\Data Flow Task"
-          DTS:CreationName="Microsoft.Pipeline"
+          DTS:CreationName="SSIS.Pipeline.3"
           DTS:Description="Data Flow Task"
           DTS:DTSID="{7F0FF980-6863-454E-9B85-DEE4D8D489C9}"
-          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:ExecutableType="SSIS.Pipeline.3"
           DTS:LocaleID="-1"
           DTS:ObjectName="Data Flow Task"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
@@ -185,7 +185,7 @@
               <components>
                 <component
                   refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
-                  componentClassID="Microsoft.FlatFileSource"
+                  componentClassID="DTSAdapter.FlatFileSource.3"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
                   localeId="1033"
@@ -334,7 +334,7 @@
                 </component>
                 <component
                   refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
                   name="OLE DB Destination"
@@ -357,7 +357,7 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -510,10 +510,10 @@
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Truncate Employee"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{C9E08B0B-CD4B-4588-BF51-9384B446483C}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:LocaleID="-1"
       DTS:ObjectName="Truncate Employee"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
@@ -541,7 +541,7 @@
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="8">
+  Version="sql11">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">

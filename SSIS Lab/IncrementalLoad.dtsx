@@ -1,20 +1,20 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/17/2016 12:48:50 PM"
-  DTS:CreationName="Microsoft.Package"
+  DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="MYDEVBOX"
   DTS:CreatorName="MYDEVBOX\admin"
   DTS:DTSID="{99CB674E-7363-42A3-8B4D-625490A359FE}"
-  DTS:ExecutableType="Microsoft.Package"
+  DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="13.0.1601.5"
   DTS:LocaleID="1033"
   DTS:ObjectName="IncrementalLoad"
   DTS:PackageType="5"
   DTS:VersionBuild="49"
-  DTS:VersionGUID="{4130B6B3-9C8E-4056-BB82-431E6A4401BA}">
+  DTS:VersionGUID="{158A9049-A65D-419C-8BB1-89281B472738}">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">8</DTS:Property>
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[ssislab]"
@@ -91,10 +91,10 @@
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Sequence Container\Data Flow Task"
-          DTS:CreationName="Microsoft.Pipeline"
+          DTS:CreationName="SSIS.Pipeline.3"
           DTS:Description="Data Flow Task"
           DTS:DTSID="{4704BE74-8B0B-496E-9032-8D6E76624106}"
-          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:ExecutableType="SSIS.Pipeline.3"
           DTS:LocaleID="-1"
           DTS:ObjectName="Data Flow Task"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
@@ -105,7 +105,7 @@
               <components>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\Conditional Split"
-                  componentClassID="Microsoft.ConditionalSplit"
+                  componentClassID="DTSTransform.ConditionalSplit.3"
                   contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
                   name="Conditional Split"
@@ -252,7 +252,7 @@
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\Merge Join"
-                  componentClassID="Microsoft.MergeJoin"
+                  componentClassID="DTSTransform.MergeJoin.3"
                   contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
                   name="Merge Join"
@@ -442,7 +442,7 @@
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\OLE DB Command"
-                  componentClassID="Microsoft.OLEDBCommand"
+                  componentClassID="DTSTransform.OLEDBCommand.3"
                   contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
                   description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
                   name="OLE DB Command"
@@ -458,7 +458,7 @@
                       description="The SQL command to be executed."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update dbo.tbl_Employee
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">update dbo.tbl_Employee
 set EName =?, EMID=?
 where EID=?</property>
                     <property
@@ -585,7 +585,7 @@ where EID=?</property>
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\OLE DB Destination"
-                  componentClassID="Microsoft.OLEDBDestination"
+                  componentClassID="DTSAdapter.OLEDBDestination.3"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
                   name="OLE DB Destination"
@@ -608,7 +608,7 @@ where EID=?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -731,7 +731,7 @@ where EID=?</property>
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\OLE DB Source"
-                  componentClassID="Microsoft.OLEDBSource"
+                  componentClassID="DTSAdapter.OLEDBSource.3"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
                   name="OLE DB Source"
@@ -754,7 +754,7 @@ where EID=?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -891,7 +891,7 @@ where EID=?</property>
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\OLE DB Source 1"
-                  componentClassID="Microsoft.OLEDBSource"
+                  componentClassID="DTSAdapter.OLEDBSource.3"
                   contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
                   description="OLE DB Source"
                   name="OLE DB Source 1"
@@ -914,7 +914,7 @@ where EID=?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -1051,7 +1051,7 @@ where EID=?</property>
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\Sort"
-                  componentClassID="Microsoft.Sort"
+                  componentClassID="DTSTransform.Sort.3"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
                   name="Sort"
@@ -1189,7 +1189,7 @@ where EID=?</property>
                 </component>
                 <component
                   refId="Package\Sequence Container\Data Flow Task\Sort 1"
-                  componentClassID="Microsoft.Sort"
+                  componentClassID="DTSTransform.Sort.3"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
                   name="Sort 1"
@@ -1374,7 +1374,7 @@ where EID=?</property>
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="8">
+  Version="sql11">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
